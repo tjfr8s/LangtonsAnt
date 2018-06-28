@@ -27,4 +27,12 @@ int main()
     ant1.rotate('l');
     printf("Rotating left from LEFT: %i \n",
             ant1.getOrientation());
+
+    ant1.rotate('r');
+    printf("Rotating right from DOWN: %i \n",
+            ant1.getOrientation());
+
+    ant1.rotate('r');
+    printf("Rotating right from LEFT: %i \n",
+            ant1.getOrientation());
 }

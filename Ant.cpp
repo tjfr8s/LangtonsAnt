@@ -36,6 +36,15 @@ void Ant::rotate(char direction)
     {
         setOrientation(Ant::DOWN);
     }
+    if(direction == 'r' && m_orientation != DOWN)
+    {
+        orientationInt += 1;
+        setOrientation(static_cast<Ant::AntDirection>(orientationInt));
+    }
+    else if(direction == 'r')
+    {
+        setOrientation(Ant::LEFT);
+    }
     return;
 }
 
