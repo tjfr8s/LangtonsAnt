@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Ant.hpp"
+#include "../Ant.hpp"
 
 int main()
 {
