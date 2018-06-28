@@ -21,7 +21,13 @@ Ant::Ant(int row, int col)
 
 
 /************************************************************
- * Description:
+ * Description: Rotates ant in specified direction.
+ * Preconditions:
+ *      Parameters:
+ *          char direction equals 'l' or 'r'
+ * Postconditions:
+ *      ant.m_orientation will move 90 degrees in the
+ *      specified direction.
 ************************************************************/
 void Ant::rotate(char direction)
 {
