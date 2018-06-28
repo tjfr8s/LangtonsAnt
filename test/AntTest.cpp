@@ -13,4 +13,18 @@ int main()
             ant1.getRow(),
             ant1.getCol(),
             ant1.getOrientation());
+
+    // Test Ant::rotate()
+
+    ant1.setOrientation(Ant::UP);
+    printf("\nOrientation set UP: %i \n",
+            ant1.getOrientation());
+
+    ant1.rotate('l');
+    printf("Rotating left from UP: %i \n",
+            ant1.getOrientation());
+
+    ant1.rotate('l');
+    printf("Rotating left from LEFT: %i \n",
+            ant1.getOrientation());
 }
