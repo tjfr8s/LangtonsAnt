@@ -10,20 +10,23 @@ CXXFLAGS += -g
 SRCEXT = cpp
 INCEXT = hpp
 
-NEED TO FIX OBJECT FILES FOR THIS PROJECT
-SRCS = $(shell find . -type f -name \*.$(SRCEXT))
+SRCS = $(shell find . -maxdepth 1 -type f -name \*.$(SRCEXT))
 OBJS = $(patsubst ./%, ./%, $(SRCS:.$(SRCEXT)=.o))
-INCS = $(shell find . -type f -name \*.$(INCEXT))
+INCS = $(shell find . -maxdepth 1 -type f -name \*.$(INCEXT))
 
 Langton: $(OBJS)
 	$(CXX) $^ -o MatrixCalc
 
-AntTest:
+AntTest: Ant.o AntTest.o
+	$(CXX) $^ -o AntTest
 
-$(OBJS): $(SRCS)
+$(OBJS): $(SRCS) $(INCS)
 	$(CXX) $(CXXFLAGS) -c $(@:.o=.$(SRCEXT))
+
+AntTest.o: 
+	$(CXX) $(CXXFLAGS) -c ./test/AntTest.cpp
 
 .PHONY: clean
 clean:
-	rm *.o MatrixCalc
+	rm *.o Langton AntTest
 
