@@ -92,7 +92,7 @@ bool Ant::move(int numRows, int numCols)
 
         case DOWN:
 
-            if(getRow() + 1 >= 0)
+            if(getRow() + 1 <= numRows)
             {
                 setRow(getRow() + 1);
                 isInBounds = true;
