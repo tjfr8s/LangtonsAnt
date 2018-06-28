@@ -4,6 +4,8 @@
 class Ant
 {
 public: 
+    Ant(int row, int col);
+
     enum AntDirection
     {
         LEFT,
@@ -19,8 +21,6 @@ public:
     int getRow();
     int getCol();
     Ant::AntDirection getOrientation();
-
-    Ant(int row, int col);
 
 private:
     int m_antRow;
