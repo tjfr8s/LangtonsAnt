@@ -28,6 +28,9 @@ public:
     void rotate(char direction);
 
 
+    bool move(int numRows, int numCols);
+    
+
     void setRow(int row);
     void setCol(int col);
     void setOrientation(AntDirection orientation);

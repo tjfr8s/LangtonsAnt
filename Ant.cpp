@@ -54,6 +54,61 @@ void Ant::rotate(char direction)
     return;
 }
 
+
+bool Ant::move(int numRows, int numCols)
+{
+    bool isInBounds(false);
+
+    // Move ant forward one space if it isn't at the
+    // edge of the board
+    switch(getOrientation())
+    {
+        case LEFT:
+
+            if(getCol() - 1 >= 0)
+            {
+                setCol(getCol() - 1);
+                isInBounds = true;
+            }
+            break;
+
+        case UP:
+
+            if(getRow() - 1 >= 0)
+            {
+                setRow(getRow() - 1);
+                isInBounds = true;
+            }
+            break;
+
+        case RIGHT:
+
+            if(getCol() + 1 <= numCols)
+            {
+                setCol(getCol() + 1);
+                isInBounds = true;
+            }
+            break;
+
+        case DOWN:
+
+            if(getRow() + 1 >= 0)
+            {
+                setRow(getRow() + 1);
+                isInBounds = true;
+            }
+            break;
+    };
+
+    if(!isInBounds)
+    {
+        rotate('r');
+    }
+
+    return isInBounds;
+}
+
+
 void Ant::setRow(int row)
 {
     m_antRow = row;

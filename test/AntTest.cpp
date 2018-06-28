@@ -35,4 +35,36 @@ int main()
     ant1.rotate('r');
     printf("Rotating right from LEFT: %i \n",
             ant1.getOrientation());
+
+
+    // Test Ant::move()
+
+    Ant ant2(2,2);
+    printf("Current position is row: "
+           "%i, col: %i\n",
+            ant2.getRow(), ant2.getCol());
+
+    ant2.move(3, 3);
+    printf("After move left row: "
+           "%i, col: %i\n",
+            ant2.getRow(), ant2.getCol());
+
+    ant2.rotate('l');
+    ant2.move(3, 3);
+    printf("After move down row: "
+           "%i, col: %i\n",
+            ant2.getRow(), ant2.getCol());
+
+    ant2.rotate('l');
+    ant2.move(3, 3);
+    printf("After move right row: "
+           "%i, col: %i\n",
+            ant2.getRow(), ant2.getCol());
+
+    ant2.rotate('l');
+    ant2.move(3, 3);
+    printf("After move up row: "
+           "%i, col: %i\n",
+            ant2.getRow(), ant2.getCol());
+           
 }
