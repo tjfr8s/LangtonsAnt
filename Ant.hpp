@@ -9,14 +9,16 @@ public:
     enum AntDirection
     {
         LEFT,
-        RIGHT,
         UP,
+        RIGHT,
         DOWN
     };
 
     void setRow(int row);
     void setCol(int col);
     void setOrientation(AntDirection orientation);
+
+    void rotate(char direction);
 
     int getRow();
     int getCol();
