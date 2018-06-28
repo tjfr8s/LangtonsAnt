@@ -55,7 +55,7 @@ void Ant::rotate(char direction)
 }
 
 
-bool Ant::move(int numRows, int numCols)
+bool Ant::move(int maxRow, int maxCols)
 {
     bool isInBounds(false);
 
@@ -83,7 +83,7 @@ bool Ant::move(int numRows, int numCols)
 
         case RIGHT:
 
-            if(getCol() + 1 <= numCols)
+            if(getCol() + 1 <= maxCols)
             {
                 setCol(getCol() + 1);
                 isInBounds = true;
@@ -92,7 +92,7 @@ bool Ant::move(int numRows, int numCols)
 
         case DOWN:
 
-            if(getRow() + 1 <= numRows)
+            if(getRow() + 1 <= maxRow)
             {
                 setRow(getRow() + 1);
                 isInBounds = true;

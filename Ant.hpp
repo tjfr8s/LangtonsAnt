@@ -28,7 +28,7 @@ public:
     void rotate(char direction);
 
 
-    bool move(int numRows, int numCols);
+    bool move(int maxRow, int maxCols);
     
 
     void setRow(int row);
