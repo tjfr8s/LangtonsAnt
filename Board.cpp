@@ -7,7 +7,9 @@
 #include "Space.hpp"
 
 Board::Board(int numRows, int numCols) 
-    : m_numRows(numRows), m_numCols(numCols)
+    : m_numRows(numRows), 
+      m_numCols(numCols),
+      m_ant(numRows / 2, numCols/2)
     
 {
     m_board = new Space* [numRows];
