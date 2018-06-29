@@ -23,7 +23,7 @@ AntTest: Ant.o AntTest.o
 $(OBJS): $(SRCS) $(INCS)
 	$(CXX) $(CXXFLAGS) -c $(@:.o=.$(SRCEXT))
 
-AntTest.o: 
+AntTest.o: ./test/AntTest.cpp
 	$(CXX) $(CXXFLAGS) -c ./test/AntTest.cpp
 
 .PHONY: clean
