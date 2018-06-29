@@ -20,8 +20,14 @@ Langton: $(OBJS)
 AntTest: Ant.o AntTest.o
 	$(CXX) $^ -o AntTest
 
+BoardTest: Board.o BoardTest.o
+	$(CXX) $^ -o BoardTest
+
 $(OBJS): $(SRCS) $(INCS)
 	$(CXX) $(CXXFLAGS) -c $(@:.o=.$(SRCEXT))
+
+BoardTest.o: ./test/BoardTest.cpp
+	$(CXX) $(CXXFLAGS) -c ./test/BoardTest.cpp
 
 AntTest.o: ./test/AntTest.cpp
 	$(CXX) $(CXXFLAGS) -c ./test/AntTest.cpp
