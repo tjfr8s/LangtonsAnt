@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdio>
-#include "Space.hpp"
+#include "../Space.hpp"
 
 int main()
 {
