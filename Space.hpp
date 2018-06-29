@@ -20,9 +20,9 @@ public:
     char getDisplayChar();
     bool isOccupied();
 
-    void setSpaceColor();
-    void setDisplayChar();
-    void setOccupied();
+    void setSpaceColor(SpaceColor color);
+    void setDisplayChar(char displayChar);
+    void setOccupied(bool occupied);
 
 private:
     SpaceColor m_spaceColor;
