@@ -34,5 +34,5 @@ AntTest.o: ./test/AntTest.cpp
 
 .PHONY: clean
 clean:
-	rm *.o Langton AntTest
+	rm *.o Langton AntTest BoardTest
 
