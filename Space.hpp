@@ -10,7 +10,7 @@ public:
         BLACK
     };
 
-    Space(bool occupied);
+    Space();
 
     void updateDisplayChar();
 
