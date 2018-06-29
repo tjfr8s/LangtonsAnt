@@ -23,6 +23,9 @@ AntTest: Ant.o AntTest.o
 BoardTest: Board.o BoardTest.o
 	$(CXX) $^ -o BoardTest
 
+SpaceTest: Space.o SpaceTest.o
+	$(CXX) $^ -o SpaceTest
+
 $(OBJS): $(SRCS) $(INCS)
 	$(CXX) $(CXXFLAGS) -c $(@:.o=.$(SRCEXT))
 
@@ -32,7 +35,10 @@ BoardTest.o: ./test/BoardTest.cpp
 AntTest.o: ./test/AntTest.cpp
 	$(CXX) $(CXXFLAGS) -c ./test/AntTest.cpp
 
+SpaceTest.o: ./test/SpaceTest.cpp
+	$(CXX) $(CXXFLAGS) -c ./test/SpaceTest.cpp
+
 .PHONY: clean
 clean:
-	rm *.o Langton AntTest BoardTest
+	rm *.o Langton AntTest SpaceTest BoardTest
 
