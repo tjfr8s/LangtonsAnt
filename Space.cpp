@@ -16,13 +16,13 @@ void Space::updateDisplayChar()
     }
 
     else if(getSpaceColor() == WHITE &&
-            getDisplayChar != ' ')
+            getDisplayChar() != ' ')
     {
         setDisplayChar(' ');
     }
 
     else if(getSpaceColor() == BLACK &&
-            getDisplayChar != '#')
+            getDisplayChar() != '#')
     {
         setDisplayChar('#');
     }
@@ -47,7 +47,7 @@ void Space::toggleColor()
 }
 
 
-SpaceColor Space::getSpaceColor()
+Space::SpaceColor Space::getSpaceColor()
 {
     return m_spaceColor;
 }
