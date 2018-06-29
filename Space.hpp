@@ -45,7 +45,7 @@ public:
 
     SpaceColor getSpaceColor();
     char getDisplayChar();
-    bool isOccupied();
+    bool getOccupied();
 
     void setSpaceColor(SpaceColor color);
     void setDisplayChar(char displayChar);

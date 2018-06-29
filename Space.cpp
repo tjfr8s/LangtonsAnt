@@ -83,7 +83,7 @@ char Space::getDisplayChar()
 }
 
 
-bool Space::isOccupied()
+bool Space::getOccupied()
 {
     return m_occupied;
 }

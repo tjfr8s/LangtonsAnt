@@ -8,43 +8,43 @@ int main()
     printf("Color: %i, Character: %c, Occupied, %s\n",
             space1.getSpaceColor(),
             space1.getDisplayChar(),
-            (space1.isOccupied() ? "true" : "false"));
+            (space1.getOccupied() ? "true" : "false"));
 
     space1.toggleColor();
     printf("Color: %i, Character: %c, Occupied, %s\n",
             space1.getSpaceColor(),
             space1.getDisplayChar(),
-            (space1.isOccupied() ? "true" : "false"));
+            (space1.getOccupied() ? "true" : "false"));
 
     space1.updateDisplayChar();
     printf("Color: %i, Character: %c, Occupied, %s\n",
             space1.getSpaceColor(),
             space1.getDisplayChar(),
-            (space1.isOccupied() ? "true" : "false"));
+            (space1.getOccupied() ? "true" : "false"));
 
     space1.toggleColor();
     printf("Color: %i, Character: %c, Occupied, %s\n",
             space1.getSpaceColor(),
             space1.getDisplayChar(),
-            (space1.isOccupied() ? "true" : "false"));
+            (space1.getOccupied() ? "true" : "false"));
 
     space1.updateDisplayChar();
     printf("Color: %i, Character: %c, Occupied, %s\n",
             space1.getSpaceColor(),
             space1.getDisplayChar(),
-            (space1.isOccupied() ? "true" : "false"));
+            (space1.getOccupied() ? "true" : "false"));
     
     space1.setOccupied(true);;
     printf("Color: %i, Character: %c, Occupied, %s\n",
             space1.getSpaceColor(),
             space1.getDisplayChar(),
-            (space1.isOccupied() ? "true" : "false"));
+            (space1.getOccupied() ? "true" : "false"));
 
     space1.updateDisplayChar();
     printf("Color: %i, Character: %c, Occupied, %s\n",
             space1.getSpaceColor(),
             space1.getDisplayChar(),
-            (space1.isOccupied() ? "true" : "false"));
+            (space1.getOccupied() ? "true" : "false"));
 
     return 0;
 }
