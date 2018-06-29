@@ -83,7 +83,7 @@ bool Ant::move(int maxRow, int maxCols)
 
         case RIGHT:
 
-            if(getCol() + 1 <= maxCols)
+            if(getCol() + 1 <  maxCols)
             {
                 setCol(getCol() + 1);
                 isInBounds = true;
@@ -92,7 +92,7 @@ bool Ant::move(int maxRow, int maxCols)
 
         case DOWN:
 
-            if(getRow() + 1 <= maxRow)
+            if(getRow() + 1 < maxRow)
             {
                 setRow(getRow() + 1);
                 isInBounds = true;
