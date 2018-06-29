@@ -48,13 +48,27 @@ void Board::antEnter(int row, int col)
 
 void Board::print()
 {
+    int boardWidth = m_numCols + 2;
+    
+    for(int col = 0; col < boardWidth; col++)
+    {
+        std::cout << "-";
+    }
+    std::cout << "\n";
+
     for(int row = 0; row < m_numRows; row++)
     {
-        std::cout << row;
+        std::cout << "|";
         for(int col = 0; col < m_numCols; col++)
         {
             std::cout << m_board[row][col].getDisplayChar();
         }
-        std::cout << "\n";
+        std::cout << "|\n";
     }
+
+    for(int col = 0; col < boardWidth; col++)
+    {
+        std::cout << "-";
+    }
+    std::cout << "\n";
 }

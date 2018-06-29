@@ -6,6 +6,7 @@
 
 int main()
 {
-    Board board1(3, 3);
+    Board board1(15, 16);
+    board1.print();
     return 0;
 }

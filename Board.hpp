@@ -1,6 +1,7 @@
 #ifndef BOARD_HPP
 #define BOARD_HPP
 
+#include <iostream>
 #include "Ant.hpp"
 #include "Space.hpp"
 
@@ -18,7 +19,11 @@ public:
     Board(int numRows, int numCols);    
     ~Board();
 
+    
+    void antLeave(int row, int col);
+    void antEnter(int row, int col);
 
+    void print();
 
 };
 
