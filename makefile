@@ -20,7 +20,7 @@ Langton: $(OBJS)
 AntTest: Ant.o AntTest.o
 	$(CXX) $^ -o AntTest
 
-BoardTest: Board.o BoardTest.o
+BoardTest: Board.o Space.o Ant.o BoardTest.o
 	$(CXX) $^ -o BoardTest
 
 SpaceTest: Space.o SpaceTest.o
