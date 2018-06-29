@@ -46,6 +46,30 @@ void Board::antEnter(int row, int col)
 }
 
 
+void Board::moveAnt()
+{
+    int antRow = m_ant.getRow();
+    int antCol = m_ant.getCol();
+
+    if(m_ant.move(m_numRows, m_numCols))
+    {
+        m_board[antRow][antCol].toggleColor();
+        antLeave(antRow, antCol);
+        if(m_board[m_ant.getRow()][m_ant.getCol()].getSpaceColor() == 
+                Space::WHITE)
+        {
+            m_ant.rotate('r');
+        }
+        else
+        {
+            m_ant.rotate('l');
+        }
+    }
+    antEnter(m_ant.getRow(), m_ant.getCol());
+    return;
+}
+
+
 void Board::print()
 {
     int boardWidth = m_numCols + 2;

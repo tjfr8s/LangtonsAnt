@@ -22,6 +22,8 @@ public:
     
     void antLeave(int row, int col);
     void antEnter(int row, int col);
+    void moveAnt();
+
 
     void print();
 
