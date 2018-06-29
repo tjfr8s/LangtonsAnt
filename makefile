@@ -20,13 +20,19 @@ Langton: $(OBJS)
 AntTest: Ant.o AntTest.o
 	$(CXX) $^ -o AntTest
 
+SpaceTest: Space.o SpaceTest.o
+	$(CXX) $^ -o SpaceTest
+
 $(OBJS): $(SRCS) $(INCS)
 	$(CXX) $(CXXFLAGS) -c $(@:.o=.$(SRCEXT))
 
 AntTest.o: ./test/AntTest.cpp
 	$(CXX) $(CXXFLAGS) -c ./test/AntTest.cpp
 
+SpaceTest.o: ./test/SpaceTest.cpp
+	$(CXX) $(CXXFLAGS) -c ./test/SpaceTest.cpp
+
 .PHONY: clean
 clean:
-	rm *.o Langton AntTest
+	rm *.o Langton AntTest SpaceTest
 
