@@ -1,5 +1,13 @@
 #include "Space.hpp"
 
+/************************************************************
+ * Description:
+ * Preconditions:
+ *      Cretae a new Space object.
+ * Postconditions"
+ *      New space object intitialzed with m_occupied = false,
+ *      m_spaceColor = WHITE, and m_displayChar = ' '.
+************************************************************/
 Space::Space()
 {
     setSpaceColor(WHITE);
@@ -8,6 +16,15 @@ Space::Space()
 }
 
 
+/************************************************************
+ * Description:
+ * Preconditions:
+ *      Change the color or occupation status of a Space 
+ *      object.
+ * Postconditions:
+ *      Space object's display character will be updated
+ *      to reflect above changes.
+************************************************************/
 void Space::updateDisplayChar()
 {
     if(m_occupied)
@@ -31,6 +48,13 @@ void Space::updateDisplayChar()
 }
 
 
+/************************************************************
+ * Description:
+ * Preconditions:
+ *      Space object created.
+ * Postconditions:
+ *      Color of space object will be changed to other option.
+************************************************************/
 void Space::toggleColor()
 {
     if(getSpaceColor() == WHITE)
