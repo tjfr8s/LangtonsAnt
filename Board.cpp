@@ -17,7 +17,7 @@ Board::Board(int numRows, int numCols)
         m_board[row] = new Space[numCols];
     }
 
-    antEnter(numRows/2, numCols/2);
+    //antEnter(numRows/2, numCols/2);
 }
 
 
