@@ -37,14 +37,14 @@
  * Postconditions:
  *      Initializes m_numRows to numRows
  *      Initializes m_numCols to numCols
- *      Initializes position of ant object to numRows/2, numCols/2
+ *      Initializes position of ant object to antRow and antCol
  *      Dynamically allocates 2D array of space objects of siz
  *      m_numRows x m_numCols
  ************************************************************/
-Board::Board(int numRows, int numCols) 
+Board::Board(int numRows, int numCols, int antRow, int antCol) 
     : m_numRows(numRows), 
       m_numCols(numCols),
-      m_ant(numRows / 2, numCols/2)
+      m_ant(antRow - 1, antCol)
 {
     m_board = new Space* [numRows];
     for(int row = 0; row < numRows; row++)

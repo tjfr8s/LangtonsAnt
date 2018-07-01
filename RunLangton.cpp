@@ -64,8 +64,17 @@ void runMenu()
                 minSteps,
                 maxSteps);
         int userSteps = intInputValidation(1, 20000);
+        printf("Enter a row for the ant between %i and %i",
+                minRows,
+                maxRows);
+        int antRow = intInputValidation(minRows, maxRows);
+        printf("Enter a column for the ant between %i and %i",
+                minCols,
+                maxCols);
+        int antCol = intInputValidation(minRows, maxRows);
 
-        runLangton(userRows, userCols, userSteps); 
+
+        runLangton(userRows, userCols, userSteps, antRow, antCol); 
     }
 }
 
@@ -82,9 +91,9 @@ void runMenu()
  *      Langtons ant simulation is displayed on a board of the
  *      passed size and for the passed number of steps.
  ************************************************************/
-void runLangton(int numRows, int numCols, int numSteps)
+void runLangton(int numSteps, int numRows, int numCols, int antRow, int antCol)
 {
-    Board board(numRows, numCols);
+    Board board(numRows, numCols, antRow, antCol);
     for(int step = 0; step < numSteps; step++)
     {
         system("clear");

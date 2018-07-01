@@ -47,6 +47,5 @@ void runMenu();
  *      Langtons ant simulation is displayed on a board of the
  *      passed size and for the passed number of steps.
  ************************************************************/
-void runLangton(int steps, int numRows, int numCols);
-
+void runLangton(int numSteps, int numRows, int numCols, int antRow, int antCol);
 #endif
