@@ -13,6 +13,7 @@
  * updating its character to reflect is occupation status and color,
  * as well as get and set functions for each data member.
 ************************************************************/
+
 #ifndef SPACE_HPP
 #define SPACE_HPP
 
