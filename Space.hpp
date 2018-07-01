@@ -1,3 +1,18 @@
+/************************************************************
+ * Author: Tyler Freitas
+ * Date: 07/01/2018
+ * Description: This class represents a space on a board
+ * for implementing Langton's ant. Each space has the following 
+ * data members:
+ *      m_spaceColor: stores the color of the space.
+ *      m_displayChar: sotres the character that is printed 
+ *      when the space is printed to the console.
+ *      m_occupied: boolean value that is true when an
+ *      ant occupies the space and false otherwise.
+ * The Space class has member functions for toggling its color,
+ * updating its character to reflect is occupation status and color,
+ * as well as get and set functions for each data member.
+************************************************************/
 #ifndef SPACE_HPP
 #define SPACE_HPP
 
