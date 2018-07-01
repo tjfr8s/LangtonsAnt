@@ -1,3 +1,21 @@
+/************************************************************
+ * Author: Tyler Freitas
+ * Date: 06/30/2018
+ * Description: This class represents an Ant object. The ant
+ * has the following properties:
+ * - m_antRow: represents the row occupied by the ant.
+ * - m_anCol: represents the column occupied by the ant.
+ * - m_orientation: represents the direction the ant is 
+ *   facing.
+ * The Ant class is equipped with get and set functions for
+ * each of the member variables. It has a rotate member
+ * function that changes the direction of the ant left or
+ * right by 90 degrees based on user input. The class also
+ * has a move member function that moves the ant forward
+ * a single space if it will not move past the maxRow and
+ * maxCol passed to the move function.
+************************************************************/
+
 #include "Ant.hpp"
 
 /************************************************************
@@ -100,6 +118,7 @@ bool Ant::move(int maxRow, int maxCols)
             break;
     };
 
+    // Rotate the ant to the right if it hit a wall.
     if(!isInBounds)
     {
         rotate('r');
