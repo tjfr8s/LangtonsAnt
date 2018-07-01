@@ -36,14 +36,36 @@ int getMenu()
  * Preconditions:
  *      Call function.
  * Postcondition:
- *      The menu is contiuously displayed until the user
+ *      - The menu is contiuously displayed until the user
  *      chooses to quit.
+ *      - The user is asked to enter a number of rows, columns
+ *      and steps.
+ *      - Langton's ant is simulated using the user input.
  ************************************************************/
 void runMenu()
 {
+    int maxRows(50);
+    int minRows(1);
+    int maxCols(150);
+    int minCols(1);
+    int maxSteps(20000);
+    int minSteps(1);
     while(getMenu() != 2)
     {
-        runLangton(10, 10, 10); 
+        printf("Enter a number of rows between %i and %i", 
+                minRows, 
+                maxRows);
+        int userRows = intInputValidation(minRows, maxRows);
+        printf("Enter a number of columns between %i and %i",
+                minCols,
+                maxCols);
+        int userCols = intInputValidation(1, 150);
+        printf("Enter a number of steps between %i and %i",
+                minSteps,
+                maxSteps);
+        int userSteps = intInputValidation(1, 20000);
+
+        runLangton(userRows, userCols, userSteps); 
     }
 }
 

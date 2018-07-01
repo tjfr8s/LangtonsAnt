@@ -7,11 +7,12 @@
  * and a function for simulating Langton's ant to the users
  * specifications.
 ************************************************************/
-#include "RunLangton.hpp"
 #ifndef RUNLANGTON_HPP
 #define RUNLANGTON_HPP
 #include <iostream>
+#include <cstdio>
 #include <unistd.h>
+#include "RunLangton.hpp"
 #include "Board.hpp"
 
 /************************************************************
