@@ -1,5 +1,5 @@
 #ifndef INTEGERVALIDATION_HPP
-#define INTEGERVALIDAITON_HPP
+#define INTEGERVALIDATION_HPP
 #include <limits>
 #include <iostream>
 
