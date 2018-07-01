@@ -51,24 +51,29 @@ void Ant::rotate(char direction)
 {
     int orientationInt = static_cast<int>(m_orientation);
 
+
     if(direction == 'l' && m_orientation != LEFT)
     {
         orientationInt -= 1;
         setOrientation(static_cast<Ant::AntDirection>(orientationInt));
     }
+    
     else if(direction == 'l')
     {
         setOrientation(Ant::DOWN);
     }
+
     if(direction == 'r' && m_orientation != DOWN)
     {
         orientationInt += 1;
         setOrientation(static_cast<Ant::AntDirection>(orientationInt));
     }
+
     else if(direction == 'r')
     {
         setOrientation(Ant::LEFT);
     }
+
     return;
 }
 
@@ -76,6 +81,7 @@ void Ant::rotate(char direction)
 bool Ant::move(int maxRow, int maxCols)
 {
     bool isInBounds(false);
+
 
     // Move ant forward one space if it isn't at the
     // edge of the board
@@ -117,6 +123,7 @@ bool Ant::move(int maxRow, int maxCols)
             }
             break;
     };
+
 
     // Rotate the ant to the right if it hit a wall.
     if(!isInBounds)
