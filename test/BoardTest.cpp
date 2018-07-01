@@ -7,7 +7,7 @@
 
 int main()
 {
-    Board board1(4, 4, 1, 1);
+    Board board1(2, 2, 2, 2);
     board1.print();
     system("pause");
     /*

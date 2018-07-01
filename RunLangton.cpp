@@ -94,6 +94,8 @@ void runMenu()
 void runLangton(int numSteps, int numRows, int numCols, int antRow, int antCol)
 {
     Board board(numRows, numCols, antRow, antCol);
+    board.print();
+    usleep(1000000);
     for(int step = 0; step < numSteps; step++)
     {
         system("clear");
