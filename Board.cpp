@@ -44,7 +44,7 @@
 Board::Board(int numRows, int numCols, int antRow, int antCol) 
     : m_numRows(numRows), 
       m_numCols(numCols),
-      m_ant(antRow - 1, antCol)
+      m_ant(antRow - 1, antCol - 1)
 {
     m_board = new Space* [numRows];
     for(int row = 0; row < numRows; row++)
@@ -52,7 +52,7 @@ Board::Board(int numRows, int numCols, int antRow, int antCol)
         m_board[row] = new Space[numCols];
     }
 
-    //antEnter(numRows/2, numCols/2);
+    antEnter(antRow - 1, antCol - 1);
 }
 
 

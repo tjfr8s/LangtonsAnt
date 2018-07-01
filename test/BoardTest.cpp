@@ -7,13 +7,16 @@
 
 int main()
 {
-    Board board1(50, 90);
+    Board board1(4, 4, 1, 1);
+    board1.print();
+    system("pause");
+    /*
     for(int i = 0; i < 23000; i++)
     {
         
         board1.print();
         board1.moveAnt();
-        usleep(1000000);
     }
+    */
     return 0;
 }
