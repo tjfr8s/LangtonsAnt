@@ -25,7 +25,7 @@
  * black and right if it is white. It also calls antEnter()
  * and antLeave() on the appropriate board locations to update
  * them.
-************************************************************/
+ ************************************************************/
 #include "Board.hpp"
 #include "Space.hpp"
 
@@ -33,7 +33,15 @@
  * Description: 
  * Preconditions:
  *      Parameters: 
-************************************************************/
+ *      numRows: integer number of rows
+ *      numCols: integer number of columns
+ * Postconditions:
+ *      Initializes m_numRows to numRows
+ *      Initializes m_numCols to numCols
+ *      Initializes position of ant object to numRows/2, numCols/2
+ *      Dynamically allocates 2D array of space objects of siz
+ *      m_numRows x m_numCols
+ ************************************************************/
 Board::Board(int numRows, int numCols) 
     : m_numRows(numRows), 
       m_numCols(numCols),
@@ -49,6 +57,13 @@ Board::Board(int numRows, int numCols)
 }
 
 
+/************************************************************
+ * Description:
+ * Preconditions:
+ *      Board object goes out of scope.
+ * Postconditions:
+ *      2D array of space objects is deallocated.
+ ************************************************************/
 Board::~Board()
 {
     for(int row = 0; row < m_numRows; row++)
@@ -60,6 +75,15 @@ Board::~Board()
 }
 
 
+/************************************************************
+ * Description:
+ * Preconditions: 
+ *      m_board[row][col] is occupied by an ant object.
+ * Postconditions:
+ *      m_board[row][col]'s  m_occupied is set to false
+ *      m_board[row][col]'s display character is updated
+ *      to reflect new status. 
+************************************************************/
 void Board::antLeave(int row, int col)
 {
     m_board[row][col].setOccupied(false);
@@ -67,6 +91,15 @@ void Board::antLeave(int row, int col)
 }
 
 
+/************************************************************
+ * Description:
+ * Preconditions: 
+ *      m_board[row][col] is not occupied by an ant object.
+ * Postconditions:
+ *      m_board[row][col]'s  m_occupied is set to true. 
+ *      m_board[row][col]'s display character is updated
+ *      to reflect new status. 
+************************************************************/
 void Board::antEnter(int row, int col)
 {
     m_board[row][col].setOccupied(true);
@@ -74,6 +107,18 @@ void Board::antEnter(int row, int col)
 }
 
 
+/************************************************************
+ * Description:
+ * Preconditions:
+ *      - Board object with ant placed on a Space.
+ * Postconditions:
+ *      - If the ant is not facing an edge of the board, it
+ *      will move forward one space and the new space and old
+ *      space will be updated to reflect the move.
+ *      - The ant will rotate based on the color of the square
+ *      it just entered. WHITE: right, BLACK: left.
+ *      -
+************************************************************/
 void Board::moveAnt()
 {
     int antRow = m_ant.getRow();
@@ -92,12 +137,19 @@ void Board::moveAnt()
         {
             m_ant.rotate('l');
         }
+        antEnter(m_ant.getRow(), m_ant.getCol());
     }
-    antEnter(m_ant.getRow(), m_ant.getCol());
     return;
 }
 
 
+/************************************************************
+ * Description:
+ * Preconditions:
+ *      Board object.
+ * Postconditions:
+ *      Display board object to console.
+ ************************************************************/
 void Board::print()
 {
     int boardWidth = m_numCols + 2;
