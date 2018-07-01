@@ -15,7 +15,7 @@ OBJS = $(patsubst ./%, ./%, $(SRCS:.$(SRCEXT)=.o))
 INCS = $(shell find . -maxdepth 1 -type f -name \*.$(INCEXT))
 
 Langton: $(OBJS)
-	$(CXX) $^ -o MatrixCalc
+	$(CXX) $^ -o Langton
 
 AntTest: Ant.o AntTest.o
 	$(CXX) $^ -o AntTest
