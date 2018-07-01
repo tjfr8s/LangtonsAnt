@@ -26,13 +26,13 @@
  * and antLeave() on the appropriate board locations to update
  * them.
  ************************************************************/
-#include "Board.hpp"
 #ifndef BOARD_HPP
 #define BOARD_HPP
 
 #include <iostream>
 #include "Ant.hpp"
 #include "Space.hpp"
+#include "Board.hpp"
 
 class Board
 {
