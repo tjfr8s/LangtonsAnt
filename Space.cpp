@@ -19,7 +19,7 @@
  * Description:
  * Preconditions:
  *      Cretae a new Space object.
- * Postconditions"
+ * Postconditions:
  *      New space object intitialzed with m_occupied = false,
  *      m_spaceColor = WHITE, and m_displayChar = ' '.
 ************************************************************/
