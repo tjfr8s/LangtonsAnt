@@ -92,7 +92,7 @@ void Ant::rotate(char direction)
  *      returns true if the ant successfully moves forward
  *      and false if it is forced to rotate instead.
  ************************************************************/
-bool Ant::move(int maxRow, int maxCols)
+bool Ant::move(int numRows, int numCols)
 {
     bool isInBounds(false);
 
@@ -121,7 +121,7 @@ bool Ant::move(int maxRow, int maxCols)
 
         case RIGHT:
 
-            if(getCol() + 1 <=  maxCols)
+            if(getCol() + 1 <=  numCols - 1)
             {
                 setCol(getCol() + 1);
                 isInBounds = true;
@@ -130,7 +130,7 @@ bool Ant::move(int maxRow, int maxCols)
 
         case DOWN:
 
-            if(getRow() + 1 <= maxRow)
+            if(getRow() + 1 <= numRows - 1)
             {
                 setRow(getRow() + 1);
                 isInBounds = true;
