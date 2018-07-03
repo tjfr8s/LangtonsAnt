@@ -34,18 +34,32 @@ public:
     };
 
 
-    /************************************************************
-     * Description: Rotates ant in specified direction.
-     * Preconditions:
-     *      Parameters:
-     *          char direction equals 'l' or 'r'
-     * Postconditions:
-     *      ant.m_orientation will move 90 degrees in the
-     *      specified direction.
-    ************************************************************/
+/************************************************************
+ * Description: Rotates ant in specified direction.
+ * Preconditions:
+ *      Parameters:
+ *          char direction equals 'l' or 'r'
+ * Postconditions:
+ *      ant.m_orientation will move 90 degrees in the
+ *      specified direction.
+************************************************************/
     void rotate(char direction);
 
 
+/************************************************************
+ * Description:
+ * Preconditions:
+ *      Parameters:
+ *          integer value for maximum number of columns.
+ *          integer value for maximum number of rows.
+ * Postconditions:
+ *      The function moves the ant forward one space in the direction
+ *      it is facing. If the movement will move the ant out 
+ *      of bounds, it stays in the square it is currently
+ *      occupying and rotates right 90 degrees. The function
+ *      returns true if the ant successfully moves forward
+ *      and false if it is forced to rotate instead.
+ ************************************************************/
     bool move(int maxRow, int maxCols);
     
 
