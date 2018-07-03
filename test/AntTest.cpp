@@ -53,18 +53,18 @@ int main()
            "%i, col: %i\n",
             ant2.getRow(), ant2.getCol());
 
-    ant2.move(3, 3);
+    ant2.move(4, 4);
     printAntPosition(ant2, "left");
     ant2.rotate('l');
-    ant2.move(3, 3);
+    ant2.move(4, 4);
     printAntPosition(ant2, "down");
 
     ant2.rotate('l');
-    ant2.move(3, 3);
+    ant2.move(4, 4);
     printAntPosition(ant2, "right");
 
     ant2.rotate('l');
-    ant2.move(3, 3);
+    ant2.move(4, 4);
     printAntPosition(ant2, "up");
 
 
