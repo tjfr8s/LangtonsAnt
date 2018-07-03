@@ -1,6 +1,15 @@
 #include <iostream>
 #include <cstdio>
+#include <string>
 #include "../Ant.hpp"
+
+void printAntPosition(Ant& ant2, char*  direction)
+{
+    printf("After movel %s  row: "
+           "%i, col: %i, orientatoin: %i\n",
+            direction, ant2.getRow(), ant2.getCol(), ant2.getOrientation());
+    return;
+}
 
 int main()
 {
@@ -45,27 +54,18 @@ int main()
             ant2.getRow(), ant2.getCol());
 
     ant2.move(3, 3);
-    printf("After move left row: "
-           "%i, col: %i\n",
-            ant2.getRow(), ant2.getCol());
+    printAntPosition(ant2, "left");
+    ant2.rotate('l');
+    ant2.move(3, 3);
+    printAntPosition(ant2, "down");
 
     ant2.rotate('l');
     ant2.move(3, 3);
-    printf("After move down row: "
-           "%i, col: %i\n",
-            ant2.getRow(), ant2.getCol());
+    printAntPosition(ant2, "right");
 
     ant2.rotate('l');
     ant2.move(3, 3);
-    printf("After move right row: "
-           "%i, col: %i\n",
-            ant2.getRow(), ant2.getCol());
-
-    ant2.rotate('l');
-    ant2.move(3, 3);
-    printf("After move up row: "
-           "%i, col: %i\n",
-            ant2.getRow(), ant2.getCol());
+    printAntPosition(ant2, "up");
 
 
     ant2.setCol(0);
