@@ -14,6 +14,7 @@
 #include <unistd.h>
 #include "RunLangton.hpp"
 #include "Board.hpp"
+#include "IntegerValidation.hpp"
 
 /************************************************************
  * Description:

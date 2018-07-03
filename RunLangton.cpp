@@ -8,7 +8,6 @@
  * specifications.
 ************************************************************/
 #include "RunLangton.hpp"
-#include "IntegerValidation.hpp"
 
 
 /************************************************************
@@ -106,7 +105,7 @@ void runLangton(int numSteps, int numRows, int numCols, int antRow, int antCol)
         board.moveAnt();
         board.print();
         usleep(1000000);
-    }    
+    }
 
     return;
 }
