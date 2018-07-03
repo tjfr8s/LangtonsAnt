@@ -13,8 +13,6 @@
 int intInputValidation(int min, int max)
 {
     int userInput(0);
-    std::cout << "Enter an integer between: " << 
-        min << " and " << max << std::endl;
     while(!(std::cin >> userInput) || 
             std::cin.peek() != '\n' ||
             userInput < min ||
@@ -23,6 +21,8 @@ int intInputValidation(int min, int max)
         std::cout << "That is not a valid integer" << std::endl;
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Enter an integer between: " << 
+            min << " and " << max << std::endl;
     }
     return userInput;
 }
