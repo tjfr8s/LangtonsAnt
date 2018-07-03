@@ -15,8 +15,8 @@ int intInputValidation(int min, int max)
     int userInput(0);
     while(!(std::cin >> userInput) || 
             std::cin.peek() != '\n' ||
-            userInput < min ||
-            userInput > max)
+            userInput <= min ||
+            userInput >= max)
     {
         std::cout << "That is not a valid integer" << std::endl;
         std::cin.clear();
