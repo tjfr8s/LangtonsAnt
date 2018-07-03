@@ -27,6 +27,7 @@ int getMenu()
     std::cout << "2. Quit\n";
 
     int userChoice = intInputValidation(1, 2);
+
     return userChoice;
 }
 
@@ -66,17 +67,19 @@ void runMenu()
         int userSteps = intInputValidation(1, 20000);
         printf("Enter a row for the ant between %i and %i\n",
                 minRows,
-                maxRows);
-        int antRow = intInputValidation(minRows, maxRows);
+                userRows);
+        int antRow = intInputValidation(minRows, userRows);
         printf("Enter a column for the ant between %i and %i\n",
                 minCols,
-                maxCols);
-        int antCol = intInputValidation(minRows, maxRows);
+                userCols);
+        int antCol = intInputValidation(minCols, userCols);
         system("clear");
 
 
-        runLangton(userRows, userCols, userSteps, antRow, antCol); 
+        runLangton(userSteps, userRows, userCols, antRow, antCol); 
     }
+
+    return;
 }
 
 
@@ -104,4 +107,6 @@ void runLangton(int numSteps, int numRows, int numCols, int antRow, int antCol)
         board.print();
         usleep(1000000);
     }    
+
+    return;
 }
