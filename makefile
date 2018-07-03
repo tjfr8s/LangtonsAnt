@@ -23,6 +23,9 @@ AntTest: Ant.o AntTest.o
 BoardTest: Board.o Space.o Ant.o BoardTest.o
 	$(CXX) $^ -o BoardTest
 
+RunLangtonTest: Board.o Space.o Ant.o RunLangton.o RunLangtonTest.o IntegerValidation.o
+	$(CXX) $^ -o RunLangtonTest
+
 SpaceTest: Space.o SpaceTest.o
 	$(CXX) $^ -o SpaceTest
 
@@ -37,6 +40,9 @@ AntTest.o: ./test/AntTest.cpp
 
 SpaceTest.o: ./test/SpaceTest.cpp
 	$(CXX) $(CXXFLAGS) -c ./test/SpaceTest.cpp
+
+RunLangtonTest.o: ./test/RunLangtonTest.cpp
+	$(CXX) $(CXXFLAGS) -c ./test/RunLangtonTest.cpp
 
 .PHONY: clean
 clean:
