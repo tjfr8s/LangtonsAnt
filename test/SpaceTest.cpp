@@ -34,7 +34,19 @@ int main()
             space1.getDisplayChar(),
             (space1.getOccupied() ? "true" : "false"));
     
-    space1.setOccupied(true);;
+    space1.setOccupied(true);
+    printf("Color: %i, Character: %c, Occupied, %s\n",
+            space1.getSpaceColor(),
+            space1.getDisplayChar(),
+            (space1.getOccupied() ? "true" : "false"));
+
+    space1.updateDisplayChar();
+    printf("Color: %i, Character: %c, Occupied, %s\n",
+            space1.getSpaceColor(),
+            space1.getDisplayChar(),
+            (space1.getOccupied() ? "true" : "false"));
+
+    space1.setOccupied(false);
     printf("Color: %i, Character: %c, Occupied, %s\n",
             space1.getSpaceColor(),
             space1.getDisplayChar(),
