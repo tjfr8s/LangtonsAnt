@@ -119,6 +119,10 @@ public:
  ************************************************************/
     void print();
 
+    int getRows() {return m_numRows;}
+    int getCols() {return m_numCols;}
+    Ant getAnt() {return m_ant;}
+
 };
 
 #endif
