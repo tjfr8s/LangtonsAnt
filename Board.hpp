@@ -79,7 +79,7 @@ public:
  *      m_board[row][col]'s  m_occupied is set to false
  *      m_board[row][col]'s display character is updated
  *      to reflect new status. 
-************************************************************/
+ ************************************************************/
     void antLeave(int row, int col);
 
 
@@ -91,7 +91,7 @@ public:
  *      m_board[row][col]'s  m_occupied is set to true. 
  *      m_board[row][col]'s display character is updated
  *      to reflect new status. 
-************************************************************/
+ ************************************************************/
     void antEnter(int row, int col);
 
 
@@ -106,7 +106,7 @@ public:
  *      - The ant will rotate based on the color of the square
  *      it just entered. WHITE: right, BLACK: left.
  *      -
-************************************************************/
+ ************************************************************/
     void moveAnt();
 
 

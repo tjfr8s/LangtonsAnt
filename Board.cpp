@@ -82,11 +82,13 @@ Board::~Board()
  *      m_board[row][col]'s  m_occupied is set to false
  *      m_board[row][col]'s display character is updated
  *      to reflect new status. 
-************************************************************/
+ ************************************************************/
 void Board::antLeave(int row, int col)
 {
     m_board[row][col].setOccupied(false);
     m_board[row][col].updateDisplayChar();
+
+    return;
 }
 
 
@@ -98,11 +100,13 @@ void Board::antLeave(int row, int col)
  *      m_board[row][col]'s  m_occupied is set to true. 
  *      m_board[row][col]'s display character is updated
  *      to reflect new status. 
-************************************************************/
+ ************************************************************/
 void Board::antEnter(int row, int col)
 {
     m_board[row][col].setOccupied(true);
     m_board[row][col].updateDisplayChar();
+
+    return;
 }
 
 
@@ -117,7 +121,7 @@ void Board::antEnter(int row, int col)
  *      - The ant will rotate based on the color of the square
  *      it just entered. WHITE: right, BLACK: left.
  *      -
-************************************************************/
+ ************************************************************/
 void Board::moveAnt()
 {
     int antRow = m_ant.getRow();
@@ -138,6 +142,7 @@ void Board::moveAnt()
         }
         antEnter(m_ant.getRow(), m_ant.getCol());
     }
+
     return;
 }
 
