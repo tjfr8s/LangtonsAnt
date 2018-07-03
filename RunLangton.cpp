@@ -52,26 +52,27 @@ void runMenu()
     int minSteps(1);
     while(getMenu() != 2)
     {
-        printf("Enter a number of rows between %i and %i", 
+        printf("Enter a number of rows between %i and %i\n", 
                 minRows, 
                 maxRows);
         int userRows = intInputValidation(minRows, maxRows);
-        printf("Enter a number of columns between %i and %i",
+        printf("Enter a number of columns between %i and %i\n",
                 minCols,
                 maxCols);
         int userCols = intInputValidation(1, 150);
-        printf("Enter a number of steps between %i and %i",
+        printf("Enter a number of steps between %i and %i\n",
                 minSteps,
                 maxSteps);
         int userSteps = intInputValidation(1, 20000);
-        printf("Enter a row for the ant between %i and %i",
+        printf("Enter a row for the ant between %i and %i\n",
                 minRows,
                 maxRows);
         int antRow = intInputValidation(minRows, maxRows);
-        printf("Enter a column for the ant between %i and %i",
+        printf("Enter a column for the ant between %i and %i\n",
                 minCols,
                 maxCols);
         int antCol = intInputValidation(minRows, maxRows);
+        system("clear");
 
 
         runLangton(userRows, userCols, userSteps, antRow, antCol); 
