@@ -46,5 +46,7 @@ RunLangtonTest.o: ./test/RunLangtonTest.cpp
 
 .PHONY: clean
 clean:
-	rm *.o Langton AntTest SpaceTest BoardTest RunLangtonTest
+	rm *.o Langton 
+	
+#AntTest SpaceTest BoardTest RunLangtonTest
 
