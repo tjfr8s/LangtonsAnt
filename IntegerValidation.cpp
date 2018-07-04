@@ -1,4 +1,3 @@
-#include "IntegerValidation.hpp"
 /************************************************************
  * Description: This function gets an integer from the user
  * and returns its value. It validates the integer and
@@ -10,6 +9,9 @@
  * Postconditions:
  *      - validated integer value is returned.
  ************************************************************/
+#include "IntegerValidation.hpp"
+
+
 int intInputValidation(int min, int max)
 {
     int userInput(0);
