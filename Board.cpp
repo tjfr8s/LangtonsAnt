@@ -67,7 +67,7 @@ Board::~Board()
 {
     for(int row = 0; row < m_numRows; row++)
     {
-        delete  m_board[row];
+        delete  [] m_board[row];
     }
 
     delete [] m_board;
