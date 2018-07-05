@@ -127,6 +127,10 @@ void Board::moveAnt()
     int antRow = m_ant.getRow();
     int antCol = m_ant.getCol();
 
+    // If the ant successfully moves forward, update the color of the space it
+    // moved out of and rotate the ant according to the space it is stepping
+    // into. Moving into a white space rotates the ant right and moving into
+    // a black space rotates left.
     if(m_ant.move(m_numRows, m_numCols))
     {
         m_board[antRow][antCol].toggleColor();
